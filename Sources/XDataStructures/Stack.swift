@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Stack <T> {
+open struct Stack <T> {
     fileprivate var items: [T] = []
     
     func peek() -> T? {
