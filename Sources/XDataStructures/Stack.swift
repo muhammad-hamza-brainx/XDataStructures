@@ -8,20 +8,26 @@
 import Foundation
 
 public struct Stack <T> {
+    
+    //MARK: List
     fileprivate var items: [T] = []
     
-    func peek() -> T? {
+    //MARK: Initializers
+    public init(){}
+    
+    //MARK: Methods
+    public func peek() -> T? {
         guard let topElement = items.first else {
             return nil
         }
         return topElement
     }
     
-    mutating func push(_ element: T) {
+    public mutating func push(_ element: T) {
         items.insert(element, at: 0)
     }
     
-    mutating func pop() -> T? {
+    public mutating func pop() -> T? {
         guard let _ = items.first else {
             return nil
         }

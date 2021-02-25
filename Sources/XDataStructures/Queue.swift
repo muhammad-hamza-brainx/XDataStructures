@@ -8,20 +8,26 @@
 import Foundation
 
 public struct Queue<T> {
+    
+    //MARK: List
     fileprivate var items: [T] = []
     
-    func peek() -> T? {
+    //MARK: Initializers
+    public init(){}
+    
+    //MARK: Methods
+    public func peek() -> T? {
         guard let lastElement = items.last else {
             return nil
         }
         return lastElement
     }
     
-    mutating func enqueue(_ element: T) {
+    public mutating func enqueue(_ element: T) {
         items.append(element)
     }
     
-    mutating func dequeue() -> T? {
+    public mutating func dequeue() -> T? {
         guard let _ = items.last else {
             return nil
         }
