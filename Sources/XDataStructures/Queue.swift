@@ -7,7 +7,7 @@
 
 import Foundation
 
-open struct Queue<T> {
+public struct Queue<T> {
     fileprivate var items: [T] = []
     
     func peek() -> T? {
