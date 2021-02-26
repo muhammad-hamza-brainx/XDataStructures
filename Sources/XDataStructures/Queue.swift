@@ -17,10 +17,7 @@ public struct Queue<T> {
     
     //MARK: Methods
     public func peek() -> T? {
-        guard let lastElement = items.last else {
-            return nil
-        }
-        return lastElement
+        return items.last
     }
     
     public mutating func enqueue(_ element: T) {

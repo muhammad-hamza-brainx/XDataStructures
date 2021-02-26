@@ -17,10 +17,7 @@ public struct Stack <T> {
     
     //MARK: Methods
     public func peek() -> T? {
-        guard let topElement = items.first else {
-            return nil
-        }
-        return topElement
+        return items.first
     }
     
     public mutating func push(_ element: T) {
